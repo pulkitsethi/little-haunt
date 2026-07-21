@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Haunt — build a spooky game together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560;9..144,600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/kit.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand-mark" href="index.html">Little Haunt</a>
+      <div>
+        <a href="#sessions">Sessions</a>
+        <a href="play/index.html">Play demo</a>
+        <a href="docs/share.html">Share</a>
+      </div>
+    </nav>
+    <div class="hero-hall" aria-hidden="true"></div>
+    <div class="hero-fog" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <h1>Little Haunt<span>Make a spooky game she’ll own.</span></h1>
+      <p>A short mentoring kit for building a first horror game in Scratch — she creates, you unstick the blocks.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="docs/setup.html">Start with setup</a>
+        <a class="btn" href="play/index.html">Try the hallway demo</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="roles" aria-labelledby="roles-title">
+    <h2 id="roles-title">Your role</h2>
+    <p class="lead">You are co-pilot, not engineer. After each session she should say “I made that scary game.”</p>
+    <div class="role-grid">
+      <div class="role">
+        <h3>She owns</h3>
+        <p>Story, monster, art, what’s scary, and the mouse. Cute and janky is perfect.</p>
+      </div>
+      <div class="role">
+        <h3>You own</h3>
+        <p>Account setup, finding the right Scratch block, and calm help when she’s stuck.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="prep" aria-labelledby="prep-title">
+    <h2 id="prep-title">Prep Scratch first</h2>
+    <p class="lead">Do this alone before she sits down — setup screens kill the magic.</p>
+    <ul class="checklist">
+      <li>Open scratch.mit.edu and create an account with a parent email</li>
+      <li>Confirm she can pick a spooky username</li>
+      <li>Click Create once so the editor loads</li>
+      <li>Allow sound; bookmark the editor</li>
+      <li>Have 30–45 quiet minutes ready</li>
+    </ul>
+    <p style="margin-top: 1.5rem"><a class="btn" href="docs/setup.html">Full setup checklist</a></p>
+  </section>
+
+  <section id="sessions" aria-labelledby="sessions-title">
+    <h2 id="sessions-title">Sessions</h2>
+    <p class="lead">One composition at a time: tiny haunted game, one mechanic, playable every time you stop.</p>
+    <ol class="session-list">
+      <li>
+        <span class="num">Session 1</span>
+        <h3>Name it, draw it, move</h3>
+        <p>Game title, dark backdrop, hero walks with arrow keys. Show someone before you quit.</p>
+        <a href="docs/session-1.html">Open Session 1 guide</a>
+      </li>
+      <li>
+        <span class="num">Sessions 2–3</span>
+        <h3>One scare, then win or lose</h3>
+        <p>Chase or jump scare first. Then exit = escaped, monster touch = caught, plus a sound.</p>
+        <a href="docs/session-2-3.html">Open Sessions 2–3 guide</a>
+      </li>
+      <li>
+        <span class="num">Anytime</span>
+        <h3>Block cheat sheet</h3>
+        <p>Motion, looks, broadcast, touching — the horror blocks on one page.</p>
+        <a href="docs/cheatsheet.html">Open cheat sheet</a>
+      </li>
+    </ol>
+  </section>
+
+  <section id="tricks" aria-labelledby="tricks-title">
+    <h2 id="tricks-title">Easy Scratch scares</h2>
+    <p class="lead">These feel advanced; they’re mostly costumes, sounds, and broadcasts.</p>
+    <div class="tricks">
+      <div class="trick">
+        <h3>Chase</h3>
+        <p><code>point towards hero</code> + <code>move 3 steps</code> forever.</p>
+      </div>
+      <div class="trick">
+        <h3>Jump scare</h3>
+        <p>Touch door → broadcast → show big costume + scream.</p>
+      </div>
+      <div class="trick">
+        <h3>Flicker</h3>
+        <p>Rapid hide/show or swap backdrops.</p>
+      </div>
+      <div class="trick">
+        <h3>Endings</h3>
+        <p>Backdrops: YOU ESCAPED vs IT GOT YOU.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="script" aria-labelledby="script-title">
+    <h2 id="script-title">What to say</h2>
+    <ul class="script">
+      <li><strong>Opening</strong>“What’s scary in your game? Who are we? What are we running from?”</li>
+      <li><strong>During</strong>“What should happen when you touch the door?”</li>
+      <li><strong>Stuck</strong>“Want me to find the block, or want a hint?”</li>
+      <li><strong>Closing</strong>“Want to scare Mom/Dad/your brother with what you made?”</li>
+    </ul>
+  </section>
+
+  <section id="demo" aria-labelledby="demo-title">
+    <h2 id="demo-title">Hallway demo</h2>
+    <p class="lead">A mild chase-and-escape game matching Sessions 2–3. Warn family it’s a little spooky, then let her coach them — or use it while her Scratch project is still private.</p>
+    <a class="btn btn-solid" href="play/index.html">Play Escape the Hallway</a>
+  </section>
+
+  <footer class="footer">
+    <a class="brand-mark" href="index.html">Little Haunt</a>
+    <p>Tone default: spooky-fun Halloween. Ask a parent before going edgier.<br />
+    <a href="docs/share.html">How to share</a> · <a href="README.md">README</a></p>
+  </footer>
+</body>
+</html>

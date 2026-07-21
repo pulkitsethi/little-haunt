@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Block cheat sheet — Little Haunt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/kit.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <nav class="nav">
+    <a class="brand-mark" href="../index.html">Little Haunt</a>
+    <div>
+      <a href="session-1.html">Session 1</a>
+      <a href="session-2-3.html">2–3</a>
+    </div>
+  </nav>
+  <main class="doc-page">
+    <a class="back-link" href="../index.html">← Back</a>
+    <h1>Scratch block cheat sheet</h1>
+    <p class="lead">Keep this open on your phone while she drives the mouse.</p>
+
+    <h2>Motion</h2>
+    <table>
+      <tr><th>Block</th><th>Use</th></tr>
+      <tr><td>change x / y by</td><td>Arrow-key walking</td></tr>
+      <tr><td>point towards [Hero]</td><td>Chase</td></tr>
+      <tr><td>move (3) steps</td><td>Chase speed</td></tr>
+      <tr><td>go to x: y:</td><td>Reset on green flag</td></tr>
+    </table>
+
+    <h2>Looks</h2>
+    <table>
+      <tr><th>Block</th><th>Use</th></tr>
+      <tr><td>switch backdrop to</td><td>Haunted / escaped / caught</td></tr>
+      <tr><td>show / hide</td><td>Jump scare</td></tr>
+      <tr><td>set size to (150) %</td><td>Boo moment</td></tr>
+    </table>
+
+    <h2>Events</h2>
+    <table>
+      <tr><th>Block</th><th>Use</th></tr>
+      <tr><td>when green flag clicked</td><td>Start / reset</td></tr>
+      <tr><td>broadcast / when I receive</td><td>Boo, escaped, caught</td></tr>
+    </table>
+
+    <h2>Control &amp; Sensing</h2>
+    <table>
+      <tr><th>Block</th><th>Use</th></tr>
+      <tr><td>forever + if</td><td>Keys, chase, touching</td></tr>
+      <tr><td>stop [all]</td><td>Freeze on win/lose</td></tr>
+      <tr><td>key pressed?</td><td>Movement</td></tr>
+      <tr><td>touching [sprite]?</td><td>Caught / escaped</td></tr>
+    </table>
+
+    <h2>Build order</h2>
+    <ol>
+      <li>Hero movement</li>
+      <li>Chase or jump scare</li>
+      <li>Exit win</li>
+      <li>Monster lose</li>
+      <li>Sounds + ending backdrops</li>
+    </ol>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Session 1 — Little Haunt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/kit.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <nav class="nav">
+    <a class="brand-mark" href="../index.html">Little Haunt</a>
+    <div>
+      <a href="setup.html">Setup</a>
+      <a href="session-2-3.html">Sessions 2–3</a>
+    </div>
+  </nav>
+  <main class="doc-page">
+    <a class="back-link" href="../index.html">← Back</a>
+    <h1>Session 1: Name it, draw it, move</h1>
+    <p class="lead">30–45 min. End with a hero she can walk through a dark place — and show someone.</p>
+
+    <h2>Opening (2 min)</h2>
+    <ol>
+      <li>“What’s scary in your game?”</li>
+      <li>“Who are we?”</li>
+      <li>“What are we running from?” (monster can wait until Session 2)</li>
+    </ol>
+    <table>
+      <thead><tr><th>Field</th><th>Her answer</th></tr></thead>
+      <tbody>
+        <tr><td>Game title</td><td>________________</td></tr>
+        <tr><td>Hero name</td><td>________________</td></tr>
+        <tr><td>Place</td><td>hallway / house / forest / ______</td></tr>
+      </tbody>
+    </table>
+
+    <h2>A — Dark backdrop (8 min)</h2>
+    <ol>
+      <li>Scratch → <strong>Create</strong></li>
+      <li>Click the <strong>Stage</strong> → <strong>Backdrops</strong></li>
+      <li>Paint near-black or deep green; add a hallway, door, or trees</li>
+      <li>Rename backdrop: <code>haunted</code></li>
+    </ol>
+
+    <h2>B — Draw the hero (10 min)</h2>
+    <ol>
+      <li>Delete or hauntify the default cat</li>
+      <li>Paint her hero; rename the sprite to the hero’s name</li>
+      <li>Keep the size readable</li>
+    </ol>
+
+    <h2>C — Arrow-key movement (12 min)</h2>
+    <p>Select the hero. She snaps; you point:</p>
+    <pre>when green flag clicked
+forever
+  if &lt;key (up arrow) pressed?&gt; then
+    change y by (5)
+  if &lt;key (down arrow) pressed?&gt; then
+    change y by (-5)
+  if &lt;key (left arrow) pressed?&gt; then
+    change x by (-5)
+  if &lt;key (right arrow) pressed?&gt; then
+    change x by (5)</pre>
+    <p><strong>Play after every direction works.</strong></p>
+
+    <h2>D — Save + name (3 min)</h2>
+    <p>Click “Untitled” → her game title → Save now.</p>
+
+    <h2>Closing</h2>
+    <p>“Want to show someone that you can walk through the haunted place?” Stop while it’s still fun.</p>
+
+    <h2>If stuck</h2>
+    <table>
+      <thead><tr><th>Problem</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr><td>No movement</td><td>Green flag? Blocks under the flag?</td></tr>
+        <tr><td>Too fast/slow</td><td>Change 5 to 3 or 8</td></tr>
+        <tr><td>Bored of blocks</td><td>Redraw backdrop or add a costume</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:2rem"><a class="btn btn-solid" href="session-2-3.html">Next: Sessions 2–3</a></p>
+  </main>
+</body>
+</html>
