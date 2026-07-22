@@ -1,48 +1,62 @@
 # Little Haunt
 
-A ready-to-use kit for helping a **10-year-old** build her first **spooky horror game** in Scratch — without killing the fun.
+A **Ghibli-inspired** meadow forest platformer with **soul-swap** abilities (PixiJS).
 
-You are the co-pilot. She owns the idea, art, and scares.
+Touch floating spirits to borrow their power — only one soul at a time:
 
-## Quick start
+| Soul | What it does |
+| --- | --- |
+| **Glide** | Hold Space in the air to float across wide gaps |
+| **Crawl** | Shrink to fit through low tunnels |
+| **Stomp** | Press ↓ / S in the air to slam and break cracked floors |
 
-1. Do [docs/01-setup-scratch.md](docs/01-setup-scratch.md) **before** she sits down
-2. Run [Session 1](docs/02-session-1.md) → [Sessions 2–3](docs/03-session-2-3.md)
-3. [Share](docs/04-share.md) after each milestone
-4. Keep [block-cheatsheet.md](docs/block-cheatsheet.md) open on your phone
+## Play
 
-Open the pretty guide in a browser:
+Rendering uses **PixiJS v8** (loaded from jsDelivr). You need a local static server (ES modules + CDN).
 
 ```bash
-cd spooky-game-kit && python3 -m http.server 8765
+cd little-haunt
+python3 -m http.server 8765
 ```
 
-Then visit `http://localhost:8765`
+Open [http://localhost:8765](http://localhost:8765).
 
-## Playable demo
+**Share:** deploy the repo folder to any static host (GitHub Pages, Netlify, Cloudflare Pages). No build step — just upload `index.html`, `style.css`, and `src/`.
 
-`play/index.html` — a mild “escape the hallway” game matching Sessions 2–3 (arrow keys, chase, win/lose). Use it to show family **now**, or as a taste of what her Scratch game can feel like.
+## Layout
 
-## What’s in the box
-
-| Path | Purpose |
+| File | Role |
 | --- | --- |
-| `index.html` | Atmospheric mentor hub |
-| `docs/01-setup-scratch.md` | Account + browser prep |
-| `docs/02-session-1.md` | Name, backdrop, movement |
-| `docs/03-session-2-3.md` | Chase or jump scare + endings |
-| `docs/04-share.md` | Family demo script |
-| `docs/block-cheatsheet.md` | Scratch blocks for horror |
-| `play/index.html` | Shareable HTML demo |
+| `src/main.js` | Game loop, physics, soul-swap, HUD |
+| `src/level.js` | Level data and collision |
+| `src/view.js` | Pixi scene: layers, bloom, resize, sync |
+| `src/pixi-textures.js` | Baked sky + traveler sprite sheet (procedural) |
+| `src/pixi-particles.js` | Leaf/pollen ambient + stomp dust sprites |
+| `src/audio.js` | Web Audio SFX |
 
-## Rules that keep it fun
+### Pixi features used
 
-- 30–45 minute sessions
-- She drives the mouse
-- End every session with something playable
-- Spooky-fun Halloween tone (ask parents before going edgier)
-- Never rebuild her game into a “better” version for her
+| Feature | What you get |
+| --- | --- |
+| **Sharp dynamic resize** | Renderer matches the frame; 960×540 game is letterboxed and stays crisp on large screens |
+| **Scene graph + parallax** | Separate sky / sun / clouds / hills / world / grass layers with independent scroll |
+| **Baked sprites** | Procedural sky + traveler run sheet via `generateTexture` + `Rectangle` |
+| **AnimatedSprite** | Run cycle when no soul is active (vector art for glide / stomp / crawl cues) |
+| **Sprite particles** | Drifting leaves & pollen; stomp dust bursts |
+| **Bloom + blur filters** | Soft glow on kodama spirits, torii light, sun, and clouds |
+| **Blend modes** | `add` / `screen` for sun wash, bloom, and warm haze |
 
-## Success
+Gameplay (physics, souls, level) stays in `main.js` / `level.js`; Pixi is the view only.
 
-She asks to work on the haunted game again — and can open her Scratch project to scare people without you.
+## Controls
+
+| Input | Action |
+| --- | --- |
+| ← → / A D | Move |
+| Space / W / ↑ | Jump (hold in air with Glide) |
+| ↓ / S | Stomp (with Stomp soul) |
+| Esc | Pause |
+
+## Goal
+
+Swap souls to clear each gate of the wood and reach the ember gate. Three lives.
