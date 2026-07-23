@@ -1,0 +1,36 @@
+:root {
+  color-scheme: dark;
+  font-family: "Nunito", system-ui, sans-serif;
+  background: #0b1020;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 10%, #1a2744 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 90%, #243018 0%, transparent 40%),
+    #0b1020;
+}
+
+#game-root {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+#game-root canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
